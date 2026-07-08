@@ -3,6 +3,7 @@
 data/
 *.xlsx
 *.csv
+logs/
 
 
 # Byte-compiled / optimized / DLL files
