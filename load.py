@@ -12,7 +12,7 @@ log_filename = f'{log_dir}/load_{timestamp}.log'
 data_dir='data'
 
 handlers=[
-    logging.FileHandler(f"{log_dir}_{timestamp}.log"),  # Saves to file
+    logging.FileHandler(f"{log_filename}"),  # Saves to file
     logging.StreamHandler()                        # Prints to terminal
 ]
 logging.basicConfig(

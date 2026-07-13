@@ -9,7 +9,7 @@ log_dir='logs/extract'
 os.makedirs(log_dir, exist_ok=True)
 log_filename = f'{log_dir}/{timestamp}.log'
 handlers=[
-    logging.FileHandler(f"{log_dir}_{timestamp}.log"),  # Saves to file
+    logging.FileHandler(f"{log_filename}"),  # Saves to file
     logging.StreamHandler()                        # Prints to terminal
 ]
 logging.basicConfig(
