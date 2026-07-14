@@ -2,13 +2,15 @@ import logging
 import os
 
 def log_config(timestamp:str,log_dir:str):
-    """This initialises logging
+    """
+    Sets up logging configuration for the application.
 
     Args:
-        timestamp (str): For the filename of the logs
-        log_dir (str): Where we want the logs stored
-    
-    
+        timestamp (str): For the filename of the logs.
+        log_dir (str): Where we want the logs stored.
+
+    Returns:
+        logger (logging.Logger): Configured logger instance.
     """
 
     os.makedirs(log_dir, exist_ok=True)

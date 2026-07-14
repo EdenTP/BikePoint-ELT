@@ -6,7 +6,18 @@ logger=logging.getLogger(__name__)
 
 
 def bikepoint_load(data_dir,aws_access_key,aws_secret_key,aws_bucket_name):
+    """
+    Uploads locally saved bikepoint JSON files to the specified S3 bucket and removes them from local storage.
 
+    Args:
+        data_dir (str): The directory where the extracted data will be saved.
+        aws_access_key (str): AWS access key.
+        aws_secret_key (str): AWS secret key.
+        aws_bucket_name (str): S3 bucket name.
+
+    Returns:
+        None, but loads the extracted data to a JSON file in the specified S3 bucket.
+    """
     
     #setting up aws bucket access
     s3_client=boto3.client(
