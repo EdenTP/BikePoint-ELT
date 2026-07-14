@@ -10,7 +10,15 @@ logger=logging.getLogger(__name__)
 
 
 def bikepoint_extract(data_dir):
+    """
+    Extract bike point data from the TFL API.
 
+    Args:
+        data_dir (str): The directory where the extracted data will be saved.
+
+    Returns:
+        None, but saves the extracted data to a JSON file in the specified S3 bucket and folder.
+    """
     timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
    
     logger.info('Logger has lift off')
