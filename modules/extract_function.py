@@ -8,8 +8,8 @@ import logging
 logger=logging.getLogger(__name__)
 
 
-def bikepoint_extract(data_dir):
 
+def bikepoint_extract(data_dir):
 
     timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
    
@@ -18,7 +18,9 @@ def bikepoint_extract(data_dir):
 
     url = 'https://api.tfl.gov.uk/BikePoint/'
 
+
     file_name = f'{data_dir}/bike_points_{timestamp}.json' #file name format for saving jsons
+
     max_retry = 5
     attempt = 0
     delay = 10

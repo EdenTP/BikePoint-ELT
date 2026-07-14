@@ -18,7 +18,9 @@ load_dotenv()
 AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_BUCKET_NAME=os.getenv('AWS_BUCKET_NAME')
+
 data_dir='data'
 bikepoint_extract(data_dir)
 
 bikepoint_load(data_dir,AWS_ACCESS_KEY,AWS_SECRET_ACCESS_KEY,AWS_BUCKET_NAME)
+
