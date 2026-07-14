@@ -4,8 +4,9 @@ import logging
 
 logger=logging.getLogger(__name__)
 
-def bikepoint_load(aws_access_key,aws_secret_key,aws_bucket_name):
-    data_dir='data'
+
+def bikepoint_load(data_dir,aws_access_key,aws_secret_key,aws_bucket_name):
+
     
     #setting up aws bucket access
     s3_client=boto3.client(
